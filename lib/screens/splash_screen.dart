@@ -1,6 +1,9 @@
 import 'dart:async';
+import 'package:azercell_mobile_app/screens/cards_screens/create_card_screen.dart';
+import 'package:azercell_mobile_app/screens/cards_screens/master_card.dart';
 import 'package:azercell_mobile_app/screens/create_customer_screen.dart';
 import 'package:flutter/material.dart';
+import '../main.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -14,10 +17,13 @@ class _SplashScreenState extends State<SplashScreen> {
     navigateToNextScreen();
   }
 
+
   Future<void> navigateToNextScreen() async {
     await Future.delayed(Duration(seconds: 3));
     Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (context) => CreateCustomerScreen()),
+      MaterialPageRoute(builder: (context) => (cardBox.isEmpty && box.isEmpty) ? CreateCustomerScreen() :
+          cardBox.isEmpty ?
+          CreateCardScreen() : MasterCard()),
     );
   }
 

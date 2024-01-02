@@ -38,28 +38,21 @@ class CustomTextField extends StatelessWidget {
           inputFormatters:inputFormatter,
           style: const TextStyle(
             fontSize: 18,
-            fontStyle: FontStyle.normal,
-            fontWeight: FontWeight.bold
           ),
           decoration: InputDecoration(
             hintText: hintText,
             prefixText: prefixText,
             prefixStyle: const TextStyle(
-              fontWeight: FontWeight.bold,
               fontSize: 18
             ),
             labelText: labelText,
             labelStyle: const TextStyle(
-              color: Colors.grey,
+              color: Colors.black,
             ),
             focusedBorder: const UnderlineInputBorder(
               borderSide: BorderSide(
                   color:  Colors.deepPurple
                       ),
-            ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: borderColor), // Set border color here
             ),
           ),
         ),
